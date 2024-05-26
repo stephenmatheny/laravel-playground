@@ -9,10 +9,12 @@ Route::get('/', function () {
 });
 
 Route::get('/jobs', function (){
-    // eager loading
-    $jobs = Job::with('employer')->get();
-    // lazy loading
-    // $jobs = Job::all();
+    // paginate
+    // $jobs = Job::with('employer')->paginate(10);
+    // simple paginate
+    $jobs = Job::with('employer')->simplePaginate(10);
+    // cursor paginate
+    // $jobs = Job::with('employer')->cursorPaginate(10);
 
     return view('jobs', ['jobs' => $jobs]);
 });
