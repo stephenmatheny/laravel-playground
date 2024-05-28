@@ -24,7 +24,6 @@ class JobController extends Controller
     }
     
     public function store() {
-        // ...validation
         request()->validate([
             'title' => ['required', 'min:3'],
             'salary' => ['required'],
