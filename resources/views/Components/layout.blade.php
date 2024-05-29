@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html class="h-full bg-gray-100">
 <title>Contact</title>
+@vite(['resources/js/app.js'])
 <script src="https://cdn.tailwindcss.com"></script>
 
 <body class="h-full">
